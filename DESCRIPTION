@@ -10,3 +10,5 @@ License: GPL-3
 Imports: Rcpp (>= 1.0.1), Matrix, foreach, parallel
 Depends: glmnet
 LinkingTo: Rcpp, RcppArmadillo
+NeedsCompilation: yes
+Packaged: 2020-07-12 19:00:41 UTC; daviddegras

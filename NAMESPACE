@@ -1,4 +1,3 @@
 useDynLib(sparseGFL, .registration=TRUE)
 importFrom(Rcpp, evalCpp)
-export(SGFL, SGFL.AXY, SGFL.SVAR, 
-	lambda.path.AXY, lambda.path.SVAR)
+export(SGFL, SGFL.AXY, SGFL.SVAR)
