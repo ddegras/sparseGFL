@@ -1,4 +1,0 @@
-useDynLib(sparseGFL, .registration=TRUE)
-importFrom(Rcpp, evalCpp)
-importFrom(RSpectra, svds)
-export(SGFL.SVAR, SGFL, lambda.path.SVAR)
