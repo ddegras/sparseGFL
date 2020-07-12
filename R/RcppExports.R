@@ -101,7 +101,3 @@ AXY_elnet <- function(x, y, lambda, alpha, intercept, diag0, eps, maxit) {
     .Call(`_sparseGFL_AXY_elnet`, x, y, lambda, alpha, intercept, diag0, eps, maxit)
 }
 
-lambda2_max <- function(z, fixg, lam1, w, maxit, tol) {
-    .Call(`_sparseGFL_lambda2_max`, z, fixg, lam1, w, maxit, tol)
-}
-
