@@ -522,22 +522,6 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// lambda2_max
-double lambda2_max(const mat& z, const uvec& fixg, double lam1, vec w, int maxit, double tol);
-RcppExport SEXP _sparseGFL_lambda2_max(SEXP zSEXP, SEXP fixgSEXP, SEXP lam1SEXP, SEXP wSEXP, SEXP maxitSEXP, SEXP tolSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const mat& >::type z(zSEXP);
-    Rcpp::traits::input_parameter< const uvec& >::type fixg(fixgSEXP);
-    Rcpp::traits::input_parameter< double >::type lam1(lam1SEXP);
-    Rcpp::traits::input_parameter< vec >::type w(wSEXP);
-    Rcpp::traits::input_parameter< int >::type maxit(maxitSEXP);
-    Rcpp::traits::input_parameter< double >::type tol(tolSEXP);
-    rcpp_result_gen = Rcpp::wrap(lambda2_max(z, fixg, lam1, w, maxit, tol));
-    return rcpp_result_gen;
-END_RCPP
-}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_sparseGFL_objective_global", (DL_FUNC) &_sparseGFL_objective_global, 8},
@@ -565,7 +549,6 @@ static const R_CallMethodDef CallEntries[] = {
     {"_sparseGFL_grad_svar", (DL_FUNC) &_sparseGFL_grad_svar, 12},
     {"_sparseGFL_compare_slices", (DL_FUNC) &_sparseGFL_compare_slices, 2},
     {"_sparseGFL_AXY_elnet", (DL_FUNC) &_sparseGFL_AXY_elnet, 8},
-    {"_sparseGFL_lambda2_max", (DL_FUNC) &_sparseGFL_lambda2_max, 6},
     {NULL, NULL, 0}
 };
 
