@@ -5,8 +5,7 @@ Version: 1.0
 Date: 2019-07-14
 Author: David Degras
 Maintainer: David Degras <ddegrasv@gmail.com>
-Description: Functions for fitting piecewise linear regression models to data. 
-A fast hybrid algorithm is used to solve the "sparse group fused lasso" problem. 
+Description: Functions for fitting piecewise linear regression models to data. A fast hybrid algorithm is used to solve the "sparse group fused lasso" problem. 
 License: GPL-3
 Imports: Rcpp (>= 1.0.1), Matrix, foreach, parallel
 Depends: glmnet
