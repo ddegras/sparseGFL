@@ -22,12 +22,11 @@ The DESCRIPTION file:
 Maintainer: \packageMaintainer{sparseGFL}
 }
 \references{
-~~ Literature or other references for background information ~~
+Degras (2020). Sparse group fused lasso for model segmentation: a hybrid approach. \emph{Advances in Data Analysis and Classification.} \url{https://doi.org/10.1007/s11634-020-00424-5}
 }
 \keyword{regression, optimize}
 \seealso{
-~~ Optional links to other man pages, e.g. ~~
-~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
+\code{\link{SGFL}}, \code{\link{SGFL.AXY}}, \code{\link{SGFL.SVAR}} 
 }
 \examples{
 ~~ simple examples of the most important functions ~~

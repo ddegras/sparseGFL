@@ -1,5 +1,5 @@
 SGFL.AXY <- function(x, y, lambda1, lambda2, alpha=1, 
-intercept=TRUE, A=NULL, w=NULL, L=NULL, sweep=c("cyclical",
+intercept=TRUE, A=NULL, w=NULL, sweep=c("cyclical",
 "srswr","srswor"), pattern=c(10,5), control=list(), 
 parallel=FALSE, verbose=FALSE)
 {
@@ -80,7 +80,7 @@ if (length(w) == 1) w <- rep_len(w,n-1)
 if (is.null(w)) w <- rep_len(1,n-1)		
 		
 ## Lipschitz constants
-if (is.null(L)) L <- colSums(x^2) + lam3
+L <- colSums(x^2) + lam3
 
 ## Activity status
 active <- rep(TRUE,n)	

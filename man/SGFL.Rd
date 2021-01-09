@@ -1,17 +1,16 @@
 \name{SGFL}
 \alias{SGFL}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Sparse Group Fused Lasso For Time-Varying Linear Regression
+\title{Sparse Group Fused Lasso For Piecewise Linear Regression with Matrix Predictor}
+
+\description{Sparse group fused lasso for the general piecewise constant linear regression model \eqn{y(t) = X(t) \beta(t) + e(t)} 
 }
-\description{
-This function implements the sparse group fused lasso or sparse group fused elastic net for a general time-varying (piecewise constant) linear regression model.  
-}
-\usage{
-SGFL(x, y, lambda1, lambda2, alpha = 1, intercept = TRUE, 
+
+\usage{SGFL(x, y, lambda1, lambda2, alpha = 1, intercept = TRUE, 
   beta = NULL, w = NULL, L = NULL, sweep = c("cyclical", "srswr", "srswor"), 
   pattern = c(10, 5), control = list(), parallel = FALSE, verbose = FALSE)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
   \item{x}{A 3D array of predictor variables. The third dimension should be time.}
   \item{y}{A matrix of response variables. Rows correspond to variables, columns to time. The dimensions of \code{x} and \code{y} must satisfy: \eqn{nrow(y)=dim(x)[1]} and \eqn{ncol(y)=dim(x)[3]}}
@@ -52,13 +51,21 @@ Logical: should the algorithm progress be displayed during the optimization? Def
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+A list with components
+\item{beta}{regression vectors in columns}
+\item{objective}{best objective value} 
+\item{changePoints}{detected change points}
+\item{trace}{objective values in all iterations}
+\item{g}{subgradient at last iteration}
+\item{iters}{number of iterations performed}
+\item{lambda1}{input \code{lambda1}}
+\item{lambda2}{input \code{lambda2}}
+\item{alpha}{input \code{alpha}}
+\item{time}{timing information for all optimization steps}
 }
+
 \references{
+Degras (2020). Sparse group fused lasso for model segmentation: a hybrid approach. \emph{Advances in Data Analysis and Classification.} \url{https://doi.org/10.1007/s11634-020-00424-5}
 }
 \note{
 }

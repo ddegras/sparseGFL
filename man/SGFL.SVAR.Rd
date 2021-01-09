@@ -65,25 +65,26 @@ where the sums are over all lags \eqn{k} and times \eqn{t}, \eqn{|| ||_1} is the
 }
 \value{
 A list with components 
-\item{A}{The gitted model parameters given as a 3D array, the third dimension being time. The \eqn{t}-th slice of \code{A} contains the matrix of coefficient estimates \eqn{[A_1(t),...,A_p(t),\mu(t)]}} with \eqn{A_0(t)} to the far left for the SVAR model. 
-
-\item{objective}{The attained minimum of the objective function.} 
-\item{changePoints}{The estimated change points range or NULL if no change point. The first change point is at least \eqn{p+2}.}
-\item{trace}{The history of objective values at each iteration of the algorithm.}	
-\item{subgradient}{The subgradient of minimum norm at solution \code{A}. This matrix should have most of its values very close to zero.}
-\item{iters}{The number of iterations/epochs performed in the optimization.}
-\item{lambda1}{The regularization parameter \code{lambda1}.}
-\item{lambda2}{The regularization parameter \code{lambda2}.}
-\item{alpha}{The elastic net mixing parameter \code{alpha}.}
-\item{time}{Time elapsed.}
+\item{A}{fitted regression matrices as 3D array, the third dimension being time. The \eqn{t}-th slice of \code{A} contains the matrix of coefficient estimates \eqn{[A_k(t),...,A_p(t),\mu(t)]} with \eqn{k=0} if \code{struct=TRUE} and \eqn{k=1} otherwise} 
+\item{objective}{best objective value} 
+\item{changePoints}{detected change points or \code{NULL}. 
+	The first change point is at least \eqn{p+2}}
+\item{trace}{objective values at each iteration}	
+\item{g}{subgradient of minimum norm at solution \code{A}. This matrix should have most of its values very close to zero.}
+\item{iters}{number of iterations performed}
+\item{lambda1}{input \code{lambda1}}
+\item{lambda2}{input \code{lambda2}}
+\item{alpha}{input \code{alpha}}
+\item{time}{timing information for all optimization steps}
 }
 \references{
-%% ~put references to the literature/web site here ~
+Degras (2020). Sparse group fused lasso for model segmentation: a hybrid approach. \emph{Advances in Data Analysis and Classification.} \url{https://doi.org/10.1007/s11634-020-00424-5}
 }
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
+\code{\link{SGFL}}, \code{\link{SGFL.AXY}}, \code{\link{refit.OLS}}
 }
+
 \examples{
 ##---- Should be DIRECTLY executable !! ----
 ##-- ==>  Define data, use random,

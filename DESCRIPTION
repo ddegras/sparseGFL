@@ -2,7 +2,7 @@ Package: sparseGFL
 Type: Package
 Title: Sparse Group Fused Lasso
 Version: 1.0
-Date: 2019-07-14
+Date: 2021-01-08
 Author: David Degras
 Maintainer: David Degras <ddegrasv@gmail.com>
 Description: Functions for fitting piecewise linear regression models to data. A fast hybrid algorithm is used to solve the "sparse group fused lasso" problem. 
