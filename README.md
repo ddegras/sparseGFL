@@ -13,9 +13,9 @@ install_github("ddegras/sparseGFL")
 ```
 ## Main functions
 - `SGFL`: solve SGFL for piecewise regression model y(t) = X(t) b(t) + e(t) 
-(matrix predictors, vector regression coefficients)
+(matrix predictors X, vector regression coefficients b)
 - `SGFL.AXY`: solve SGFL for piecewise regression model y(t) = A(t) x(t) + e(t) 
-(vector predictors, matrix regression coefficients)
+(vector predictors x, matrix regression coefficients A)
 - `SGFL.VAR`: solve SGFL for piecewise vector autoregressive (VAR) model y(t) = A1(t) y(t-1) + ... + Ap(t) y(t-p) + e(t)
 
 ### Reference
