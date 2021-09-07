@@ -6,7 +6,7 @@ The algorithm finds global solutions to the sparse group fused lasso (SGFL) prob
 
 ## Package installation
 ``` 
-install.packages(c("Rcpp", "RcppArmadillo", "Matrix", "foreach")) # package dependencies
+install.packages(c("foreach", "glmnet", "Matrix", "Rcpp", "RcppArmadillo")) # package dependencies and imports
 install.packages("devtools")
 library(devtools)  
 install_github("ddegras/sparseGFL") 
